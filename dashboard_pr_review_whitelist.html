@@ -12,6 +12,7 @@
 .callout{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--secondary);margin-bottom:18px}.callout b{color:var(--primary)}
 .tiles{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:24px}
 .tile{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px}.tile .v{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}.tile .k{font-size:11px;color:var(--muted);margin-top:2px}.tile.merge .v{color:var(--s-merge)}
+.dlt{display:inline-block;font-size:11px;font-weight:600;margin-left:5px;vertical-align:middle;font-variant-numeric:tabular-nums}.dlt.up{color:#B45309}.dlt.dn{color:#1baf7a}.dlt.zero{color:var(--muted)}
 .ctl{display:flex;gap:8px;align-items:center;margin-bottom:20px;flex-wrap:wrap}.ctl button{font:inherit;background:var(--surface);color:var(--secondary);border:1px solid var(--border);border-radius:7px;padding:6px 12px;cursor:pointer}.ctl button:hover{color:var(--primary)}.ctl .right{margin-left:auto}
 .dbtn.on{color:var(--primary);border-color:var(--s-open);box-shadow:inset 0 0 0 1px var(--s-open)}
 .chart.deptfilter .row{display:none}.chart.deptfilter .row.dmatch{display:grid}
@@ -53,13 +54,13 @@ table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}th,td{pa
   <div class="sub">社区贡献看板 · 575 个 PR · 数据生成于 2026-08-17</div></div>
   <div class="callout"><b>合入口径：</b>合入以「Merged」label 为信号（land-bot 推 main 再关 PR 时 GitHub <code>merged</code> 字段恒为 false，故信 label）。<b>点击任意柱状条</b>可下钻查看该人提交/检视的 PR 清单（每 PR 显合入态 + 闭环态）。 本看板仅含华为成员的提交 PR + 其在 PR 中的全部发言(含自评/回复，活动度口径)。</div>
   <div class="tiles">
-    <div class="tile"><div class="v">575</div><div class="k">PR 总数</div></div>
-    <div class="tile merge"><div class="v">73</div><div class="k">已合入</div></div>
-    <div class="tile"><div class="v">496</div><div class="k">开放</div></div>
-    <div class="tile"><div class="v">6</div><div class="k">已关闭未合入</div></div>
-    <div class="tile"><div class="v">3555</div><div class="k">检视意见</div></div>
-    <div class="tile"><div class="v">46</div><div class="k">提交者</div></div>
-    <div class="tile"><div class="v">54</div><div class="k">检视者</div></div>
+    <div class="tile"><div class="v">575<span class="dlt up">+33</span></div><div class="k">PR 总数</div></div>
+    <div class="tile merge"><div class="v">73<span class="dlt up">+4</span></div><div class="k">已合入</div></div>
+    <div class="tile"><div class="v">496<span class="dlt up">+24</span></div><div class="k">开放</div></div>
+    <div class="tile"><div class="v">6<span class="dlt up">+5</span></div><div class="k">已关闭未合入</div></div>
+    <div class="tile"><div class="v">3555<span class="dlt up">+172</span></div><div class="k">检视意见</div></div>
+    <div class="tile"><div class="v">46<span class="dlt up">+1</span></div><div class="k">提交者</div></div>
+    <div class="tile"><div class="v">54<span class="dlt up">+2</span></div><div class="k">检视者</div></div>
   </div>
   <div class="ctl"><button id="theme">🌓 切换深色</button><span style="font-size:12.5px;color:var(--muted)">部门:</span><button class="dbtn on" data-dept="__all__">全部</button><button class="dbtn" data-dept="小巧灵">小巧灵</button><button class="dbtn" data-dept="开源">开源</button><button class="dbtn" data-dept="框架">框架</button><button class="dbtn" data-dept="生态">生态</button><button class="dbtn" data-dept="土研">土研</button><button class="right" id="view">📋 表格视图</button></div>
   <section>
